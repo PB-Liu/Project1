@@ -43,7 +43,8 @@ let quotes = [
   },
   {
     source: "Epictetus",
-    quote: "It's not what happens to you, but how you react to it that matters."
+    quote: "It's not what happens to you, but how you react to it that matters.",
+    citation: "Discourses"
   },
   {
     source: "Seneca",
