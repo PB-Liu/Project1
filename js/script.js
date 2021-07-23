@@ -18,7 +18,8 @@ let quotes = [
   },
   {
     source: "Seneca",
-    quote: "Most powerful is he who has himself in his own power."
+    quote: "Most powerful is he who has himself in his own power.",
+    year: "circa 50AD"
   },
   {
     source: "Socrates",
@@ -45,8 +46,9 @@ let quotes = [
     quote: "It's not what happens to you, but how you react to it that matters."
   },
   {
-    source: "Senneca",
-    quote: "We are more often frightened than hurt; and we suffer more in imagination than in reality."
+    source: "Seneca",
+    quote: "We are more often frightened than hurt; and we suffer more in imagination than in reality.",
+    year: "circa 50AD"
   },
   {
     source: "Marcus Aurelius",
@@ -81,16 +83,18 @@ function printQuote() {
   let obj = getRandomQuote();
   let str = `<p class="quote"> ${obj.quote} </p>
         <p class="source"> ${obj.source}`
-  if (object.citation) {
+  if (obj.citation) {
     str += `<span class="citation"> ${obj.citation} </span>`;
   }
   if (obj.year) {
-    str += `<span class="year"> ${obj.year} </span>str`;
+    str += `<span class="year"> ${obj.year} </span>`;
   }
-  return str + '</p>'
+  str += '</p>'
+  document.getElementById('quote-box').innerHTML = str;
+  return str;
 }
 
-document.getElementById('quote-box').innerHTML = printQuote();
+
 
 /***
  * click event listener for the print quote button
