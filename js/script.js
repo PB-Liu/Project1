@@ -3,15 +3,9 @@ Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
 
-// For assistance: 
-// Check the "Project Resources" section of the project instructions
-// Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
-/*** 
- * `quotes` array 
-***/
 
-let quotes = [
+let quotes = [   //intialize an array of quote objects 
   {
     source: "Heraclitus",
     quote: "No man ever steps in the same river twice, for it's not the same river and he's not the same man."
@@ -81,13 +75,13 @@ console.log(getRandomQuote())
 ***/
 
 function printQuote() {
-  let obj = getRandomQuote();
+  let obj = getRandomQuote();   // get a random quote object 
   let str = `<p class="quote"> ${obj.quote} </p>
-        <p class="source"> ${obj.source}`
-  if (obj.citation) {
+        <p class="source"> ${obj.source}`   //from the quote object generated an HTML string
+  if (obj.citation) {                   //if the quote object has citation information, add it to the HTML string via concatenation 
     str += `<span class="citation"> ${obj.citation} </span>`;
   }
-  if (obj.year) {
+  if (obj.year) {   ////if the quote object has year information, add it to the HTML string via concatenation 
     str += `<span class="year"> ${obj.year} </span>`;
   }
   str += '</p>'
