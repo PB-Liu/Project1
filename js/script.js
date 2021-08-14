@@ -81,7 +81,7 @@ function printQuote() {
   if (obj.citation) {                   //if the quote object has citation information, add it to the HTML string via concatenation 
     str += `<span class="citation"> ${obj.citation} </span>`;
   }
-  if (obj.year) {   ////if the quote object has year information, add it to the HTML string via concatenation 
+  if (obj.year) {   //if the quote object has year information, add it to the HTML string via concatenation 
     str += `<span class="year"> ${obj.year} </span>`;
   }
   str += '</p>'
